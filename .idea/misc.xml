@@ -4,7 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Augmented_Reality_app/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/Users/alibi/AndroidStudioProjects/Augmented_Reality_app/app/src/main/res/layout/activity_main_app.xml" value="0.18385416666666668" />
+        <entry key="..\:/Users/alibi/AndroidStudioProjects/Augmented_Reality_app/app/src/main/res/layout/activity_main_app.xml" value="0.21965579710144928" />
         <entry key="..\:/Users/alibi/AndroidStudioProjects/Augmented_Reality_app/app/src/main/res/layout/activity_registeruser.xml" value="0.184375" />
       </map>
     </option>
@@ -14,12 +14,5 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
-  </component>
-  <component name="VisualizationToolProject">
-    <option name="state">
-      <ProjectState>
-        <option name="scale" value="0.1" />
-      </ProjectState>
-    </option>
   </component>
 </project>

@@ -70,11 +70,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             editTextEmail.requestFocus();
             return;
         }
-        if (Patterns.EMAIL_ADDRESS.matcher(email).matches()){
-            editTextEmail.setError("Please enter a valid email");
-            editTextEmail.requestFocus();
-            return;
-        }
+      //  if (Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+        //    editTextEmail.setError("Please enter a valid email");
+       //     editTextEmail.requestFocus();
+        //    return;
+       // }
         if(password.isEmpty()){
             editTextPassword.setError("Please enter a valid password");
             editTextPassword.requestFocus();
@@ -98,6 +98,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     else{
                         user.sendEmailVerification();
                         Toast.makeText(MainActivity.this , "Check Your Email to verify" , Toast.LENGTH_LONG).show();
+                        prograssBar.setVisibility(View.GONE);
                     }
                 }
                 else{

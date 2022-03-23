@@ -103,39 +103,37 @@ public class registeruser extends AppCompatActivity implements View.OnClickListe
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
 
-                    if (task.isSuccessful()){
+                        if (task.isSuccessful()){
 
-                        User user = new User(FullName , age , email);
+                            User user = new User(FullName , age , email);
 
-                        FirebaseDatabase.getInstance().getReference("Users")
-                        .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                        .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
-                            @Override
-                            public void onComplete(@NonNull Task<Void> task) {
-                                if(task.isSuccessful()){
-                                    Toast.makeText(registeruser.this,"User has been regestered sucessfully", Toast.LENGTH_LONG).show();
-                                    progressBar.setVisibility(View.GONE);
+                            FirebaseDatabase.getInstance().getReference("Users")
+                                    .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                    .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    if(task.isSuccessful()){
+                                        Toast.makeText(registeruser.this,"User has been regestered sucessfully", Toast.LENGTH_LONG).show();
+                                        progressBar.setVisibility(View.GONE);
 
+                                    }
+                                    else{
+                                        Toast.makeText(registeruser.this,"Failed to register! try again", Toast.LENGTH_LONG).show();
+                                        progressBar.setVisibility(View.GONE);
+                                    }
                                 }
-                                else{
-                                    Toast.makeText(registeruser.this,"Failed to register! try again", Toast.LENGTH_LONG).show();
-                                            progressBar.setVisibility(View.GONE);
-                                }
-                            }
-                        });
+                            });
 
-                    }else{
+                        }else{
 
-                        Toast.makeText(registeruser.this,"Failed to register! try again", Toast.LENGTH_LONG).show();
-                        progressBar.setVisibility(View.GONE);
+                            Toast.makeText(registeruser.this,"Failed to register! try again", Toast.LENGTH_LONG).show();
+                            progressBar.setVisibility(View.GONE);
 
-                    }
+                        }
                     }
                 });
 
 
 
-        }
     }
-
-
+}
